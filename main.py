@@ -1,13 +1,16 @@
-
-
-
-hide_debug_information()
-set_website_title("Your Drafter Website")
-set_website_framed(False)
-
-
 from drafter import *
 from dataclasses import dataclass
+hide_debug_information()
+set_website_title("Basketball Shot Calculator")
+set_website_framed(False)
+
+set_site_information(
+    author="Tanner Murray",
+    description="A basketball shot calculator that tells you if a shot is made or missed",
+    sources=[],
+    planning=["plan.pdf", "design.pdf"],
+    links=["https://github.com/murrayt-web/Drafter-Final-Project"]
+    )
 
 Free_Throw_Distance = 15
 Three_Point_Distance = 22
@@ -218,4 +221,5 @@ assert_equal(
     ]))
         
 
-start_server(State())
+start_server(State("", "Free Throw", [], 0))
+
